@@ -1716,8 +1716,6 @@
     </style>
     <style name="Theme.AppCompat.Light" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:scaleWidth">match_parent</item>
-        <item name="android:scaleHeight">match_parent</item>
         <item name="android:windowBackground">@android:color/holo_orange_light</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
