@@ -4,9 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by LeydsonTavares on 15/04/2016.
- */
 public class BeerBD extends SQLiteOpenHelper {
 
     public static BeerBD instance = null;
@@ -23,7 +20,7 @@ public class BeerBD extends SQLiteOpenHelper {
             COLUNAS_TBL_BEER[1] + " TEXT, " +
             COLUNAS_TBL_BEER[2] + " TEXT, " +
             COLUNAS_TBL_BEER[3] + " BLOB, " +
-            COLUNAS_TBL_BEER[4] + " TEXT, " +
+            COLUNAS_TBL_BEER[4] + " REAL, " +
             COLUNAS_TBL_BEER[5] + " TEXT, " +
             COLUNAS_TBL_BEER[6] + " TEXT);";
 

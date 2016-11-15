@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.leydsontavares.beerregisterapplication.view.SplashScreenActivity"
-            android:theme="@style/Theme.Transparent" >
+            android:theme="@style/Theme.AppCompat.Light" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,6 +43,12 @@
                 android:name="com.facebook.FacebookContentProvider"
                 android:authorities="com.facebook.app.FacebookContentProvider"
                 android:exported="true" />
+        </activity>
+        <activity android:name="com.example.leydsontavares.beerregisterapplication.view.RankingActivity" />
+        <activity android:name="com.example.leydsontavares.beerregisterapplication.view.SugestaoActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.ListarBeerActivity" />
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
