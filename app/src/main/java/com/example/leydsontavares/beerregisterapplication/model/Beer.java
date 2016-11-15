@@ -1,28 +1,28 @@
-﻿package com.example.leydsontavares.beerregisterapplication.model;
+package com.example.leydsontavares.beerregisterapplication.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Created by LeydsonTavares on 20/09/2016.
- */
-public class Beer implements Parcelable {
+
+public class Beer implements Parcelable,Comparable<Beer>{
 
 
     private int mId;
     private String mNome;
     private String mDescricao;
     private byte[] mImagem;
-    private String mQualidade;
+    private Float mQualidade;
     private Double mTeorAlcolico;
     private String mNacionalidade;
+    private int mDrawlable;
 
 
-    public Beer(int id, String nome, String descrição, byte[] imagem, String qualidade,
-                Double teorAlcolico,String nacionalidade) {
+
+    public Beer(int id, String nome, String descricao, byte[] imagem, Float qualidade,
+                Double teorAlcolico, String nacionalidade) {
         this.mId = id;
         this.mNome = nome;
-        this.mDescricao = descrição;
+        this.mDescricao = descricao;
         this.mImagem = imagem;
         this.mQualidade = qualidade;
         this.mTeorAlcolico = teorAlcolico;
@@ -38,7 +38,7 @@ public class Beer implements Parcelable {
         mNome = in.readString();
         mDescricao = in.readString();
         mImagem = in.createByteArray();
-        mQualidade = in.readString();
+        mQualidade = in.readFloat();
         mTeorAlcolico = in.readDouble();
         mNacionalidade = in.readString();
 
@@ -57,7 +57,6 @@ public class Beer implements Parcelable {
     };
 
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -69,14 +68,12 @@ public class Beer implements Parcelable {
         dest.writeString(mNome);
         dest.writeString(mDescricao);
         dest.writeByteArray(mImagem);
-        dest.writeString(mQualidade);
+        dest.writeFloat(mQualidade);
         dest.writeDouble(mTeorAlcolico);
         dest.writeString(mNacionalidade);
 
 
     }
-
-
 
 
     public int getmId() {
@@ -111,11 +108,11 @@ public class Beer implements Parcelable {
         this.mImagem = mImagem;
     }
 
-    public String getmQualidade() {
+    public Float getmQualidade() {
         return mQualidade;
     }
 
-    public void setmQualidade(String mQualidade) {
+    public void setmQualidade(Float mQualidade) {
         this.mQualidade = mQualidade;
     }
 
@@ -135,5 +132,26 @@ public class Beer implements Parcelable {
         this.mNacionalidade = mNacionalidade;
     }
 
+    public int getmDrawlable() {
+        return mDrawlable;
+    }
 
+    public void setmDrawlable(int mDrawlable) {
+        this.mDrawlable = mDrawlable;
+    }
+
+
+    @Override
+    public int compareTo(Beer another) {
+        if ((this.mQualidade) > (another.getmQualidade())) {
+            return -1;
+        }
+        if ((this.mQualidade) < (another.getmQualidade())) {
+            return 1;
+        }
+        return 0;
+    }
 }
+
+
+

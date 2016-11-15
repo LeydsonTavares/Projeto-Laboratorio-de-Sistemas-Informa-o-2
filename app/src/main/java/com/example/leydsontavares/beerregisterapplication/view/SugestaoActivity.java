@@ -1,8 +1,12 @@
 package com.example.leydsontavares.beerregisterapplication.view;
 
 
+import android.content.DialogInterface;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.GridView;
 import com.example.leydsontavares.beerregisterapplication.R;
 import com.example.leydsontavares.beerregisterapplication.model.Beer;
@@ -28,7 +32,7 @@ public class SugestaoActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         /**
-         * 
+         *
 
 
         listaSugestao = new LinkedList<Beer>();
@@ -53,6 +57,35 @@ public class SugestaoActivity extends AppCompatActivity {
         mGridView.setAdapter(mAdapter);
          */
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        builder.setTitle("Sair?");
+        builder.setMessage("Deseja realmente sair?");
+        builder.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+            }
+        });
+        AlertDialog alerta = builder.create();
+        alerta.show();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
 
 }

@@ -9,9 +9,6 @@ import com.example.leydsontavares.beerregisterapplication.model.Beer;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by LeydsonTavares on 15/04/2016.
- */
 public class BeerDAO {
     private Context mContext;
 
@@ -89,7 +86,7 @@ public class BeerDAO {
         beer.setmNome(cursor.getString(1));
         beer.setmDescricao(cursor.getString(2));
         beer.setmImagem(cursor.getBlob(3));
-        beer.setmQualidade(cursor.getString(4));
+        beer.setmQualidade(cursor.getFloat(4));
         beer.setmTeorAlcolico(cursor.getDouble(5));
         beer.setmNacionalidade(cursor.getString(6));
 
