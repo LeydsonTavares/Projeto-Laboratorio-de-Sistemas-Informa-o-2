@@ -2907,7 +2907,8 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int menu_cadastro=0x7f0e0000;
-        public static final int menu_listar=0x7f0e0001;
+        public static final int menu_editar=0x7f0e0001;
+        public static final int menu_listar=0x7f0e0002;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
