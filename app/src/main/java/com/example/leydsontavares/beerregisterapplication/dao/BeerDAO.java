@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.example.leydsontavares.beerregisterapplication.model.Beer;
+import com.example.leydsontavares.beerregisterapplication.model.BeerBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,30 +69,29 @@ public class BeerDAO {
 
         Cursor cursor = BeerBD.getInstance(mContext).getReadableDatabase().query(BeerBD.NOME_TBL_BEER, BeerBD.COLUNAS_TBL_BEER,
                 BeerBD.COLUNAS_TBL_BEER[0] + "=" + id, null, null, null, null);
-        List<Beer> demandasList = new ArrayList<>();
+        List<Beer> beerArrayList = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            demandasList.add(cursorBeer(cursor));
+            beerArrayList.add(cursorBeer(cursor));
 
         }
-        return demandasList.get(0);
+        return beerArrayList.get(0);
 
 
     }
 
     public Beer cursorBeer(Cursor cursor) {
-        Beer beer = new Beer();
+        BeerBuilder beer = new BeerBuilder();
 
-        beer.setmId(cursor.getInt(0));
-        beer.setmNome(cursor.getString(1));
-        beer.setmDescricao(cursor.getString(2));
-        beer.setmImagem(cursor.getBlob(3));
-        beer.setmQualidade(cursor.getFloat(4));
-        beer.setmTeorAlcolico(cursor.getDouble(5));
-        beer.setmNacionalidade(cursor.getString(6));
+        beer.buildId(cursor.getInt(0));
+        beer.buildNome(cursor.getString(1));
+        beer.buildDescricao(cursor.getString(2));
+        beer.buildImagem(cursor.getBlob(3));
+        beer.buildQualidade(cursor.getFloat(4));
+        beer.buildTeorAlcolico(cursor.getDouble(5));
+        beer.buildNacionalidade(cursor.getString(6));
 
-
-        return beer;
+        return beer.build();
 
     }
 

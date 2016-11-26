@@ -54,7 +54,7 @@ public class GridViewBeerAdapter extends BaseAdapter {
             holder = new ViewHolder(view);
             Beer beer = beerList.get(position);
 
-            holder.mPoster.setImageDrawable(ContextCompat.getDrawable(mContext ,beer.getmDrawlable()));
+
 
         } else {
             view = convertView;

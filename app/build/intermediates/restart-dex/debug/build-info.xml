@@ -4,43 +4,46 @@
     api-level="21"
     density="xhdpi"
     format="7"
-    timestamp="328830267636495"
-    token="-513908612775283171" >
+    timestamp="99282973778837"
+    token="-513908612775283171"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="953" />
+        duration="1062" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="1433" />
     <task
         name="instant-run-transform"
-        duration="184" />
+        duration="83" />
     <task
         name="verifier"
-        duration="19" />
+        duration="27" />
 
     <artifact
-        location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-        type="DEX" />
+        location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="320667572425992" >
+    <build timestamp="94364125525533" >
         <artifact
             location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="323598364283415" >
+    <build timestamp="99178246272054" >
         <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
-    </build>
-    <build timestamp="328830267636495" >
         <artifact
             location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="99282973778837"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
     <build timestamp="888790332430169" >
         <artifact

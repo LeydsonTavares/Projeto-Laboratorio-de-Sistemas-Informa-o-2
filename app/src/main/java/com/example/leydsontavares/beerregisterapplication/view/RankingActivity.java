@@ -28,8 +28,6 @@ public class RankingActivity extends AppCompatActivity {
     GerenciadorBeer gerenciador;
     private ListViewRankingAdapter mAdapterRanking;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,23 +38,6 @@ public class RankingActivity extends AppCompatActivity {
         mAdapterRanking = new ListViewRankingAdapter(gerenciador.buscarTodasBeer(), this);
         mListViewBeer.setAdapter(mAdapterRanking);
 
-    }
-    @Override
-    public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Sair?");
-        builder.setMessage("Deseja realmente sair?");
-        builder.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                finish();
-            }
-        });
-        builder.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-            }
-        });
-        AlertDialog alerta = builder.create();
-        alerta.show();
     }
 
 }

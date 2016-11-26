@@ -68,6 +68,7 @@ public class ListarBeerActivity extends AppCompatActivity {
         sv.setOnQueryTextListener(new SearchFiltro());
         return true;
     }
+
     private class SearchFiltro implements OnQueryTextListener {
 
         @Override
@@ -96,7 +97,6 @@ public class ListarBeerActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
@@ -109,21 +109,21 @@ public class ListarBeerActivity extends AppCompatActivity {
         return true;
     }
 
-
-
     @OnClick(R.id.fab_add_beer)
     public void addBeer() {
+        finish();
         startActivity(new Intent(ListarBeerActivity.this, CadastroActivity.class));
     }
 
     @OnItemClick(R.id.list_view_beer)
     protected void itemClicado(final int position) {
-
+        finish();
         Beer beer = (Beer)  mListViewBeer.getItemAtPosition(position);
         Intent intent = new Intent(ListarBeerActivity.this, CadastroActivity.class);
         intent.putExtra("beer", beer);
         startActivity(intent);
     }
+
     @OnItemLongClick(R.id.list_view_beer)
     protected boolean itemLongClicado(final int position) {
 
@@ -153,6 +153,7 @@ public class ListarBeerActivity extends AppCompatActivity {
         builder.show();
         return true;
     }
+
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
