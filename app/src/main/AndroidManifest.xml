@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.CadastroActivity" />
+        <activity android:name=".view.CadastroActivity" >
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value=".view.ListarBeerActivity" />
+        </activity>
         <activity android:name=".view.ListarBeerActivity" />
         <activity
             android:name=".view.MainActivity"
@@ -32,7 +36,11 @@
                 android:name="com.facebook.sdk.ApplicationId"
                 android:value="@string/facebook_app_id" />
         </activity>
-        <activity android:name=".view.RankingActivity" />
+        <activity android:name=".view.RankingActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.ListarBeerActivity" />
+        </activity>
         <activity android:name=".view.SugestaoActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,0 +1,1 @@
+CHANGED,C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\leydsontavares\beerregisterapplication\view\CadastroActivity.class

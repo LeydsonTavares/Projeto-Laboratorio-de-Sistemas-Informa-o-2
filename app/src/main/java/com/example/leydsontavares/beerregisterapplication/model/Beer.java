@@ -4,34 +4,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 
-public class Beer implements Parcelable,Comparable<Beer>{
+public class Beer implements Parcelable,Comparable<Beer> {
 
+    int mId;
+    String mNome;
+    String mDescricao;
+    byte[] mImagem;
+    Float mQualidade;
+    Double mTeorAlcolico;
+    String mNacionalidade;
 
-    private int mId;
-    private String mNome;
-    private String mDescricao;
-    private byte[] mImagem;
-    private Float mQualidade;
-    private Double mTeorAlcolico;
-    private String mNacionalidade;
-    private int mDrawlable;
+    public Beer(){}
 
-
-
-    public Beer(int id, String nome, String descricao, byte[] imagem, Float qualidade,
-                Double teorAlcolico, String nacionalidade) {
-        this.mId = id;
-        this.mNome = nome;
-        this.mDescricao = descricao;
-        this.mImagem = imagem;
-        this.mQualidade = qualidade;
-        this.mTeorAlcolico = teorAlcolico;
-        this.mNacionalidade = nacionalidade;
-
-    }
-
-    public Beer() {
-    }
 
     public Beer(Parcel in) {
         mId = in.readInt();
@@ -44,7 +28,7 @@ public class Beer implements Parcelable,Comparable<Beer>{
 
     }
 
-    public static final Creator<Beer> CREATOR = new Creator<Beer>() {
+    public static final Parcelable.Creator<Beer> CREATOR = new Parcelable.Creator<Beer>() {
         @Override
         public Beer createFromParcel(Parcel in) {
             return new Beer(in);
@@ -75,72 +59,6 @@ public class Beer implements Parcelable,Comparable<Beer>{
 
     }
 
-
-    public int getmId() {
-        return mId;
-    }
-
-    public void setmId(int mId) {
-        this.mId = mId;
-    }
-
-    public String getmNome() {
-        return mNome;
-    }
-
-    public void setmNome(String mNome) {
-        this.mNome = mNome;
-    }
-
-    public String getmDescricao() {
-        return mDescricao;
-    }
-
-    public void setmDescricao(String mDescricao) {
-        this.mDescricao = mDescricao;
-    }
-
-    public byte[] getmImagem() {
-        return mImagem;
-    }
-
-    public void setmImagem(byte[] mImagem) {
-        this.mImagem = mImagem;
-    }
-
-    public Float getmQualidade() {
-        return mQualidade;
-    }
-
-    public void setmQualidade(Float mQualidade) {
-        this.mQualidade = mQualidade;
-    }
-
-    public Double getmTeorAlcolico() {
-        return mTeorAlcolico;
-    }
-
-    public void setmTeorAlcolico(Double mTeorAlcolico) {
-        this.mTeorAlcolico = mTeorAlcolico;
-    }
-
-    public String getmNacionalidade() {
-        return mNacionalidade;
-    }
-
-    public void setmNacionalidade(String mNacionalidade) {
-        this.mNacionalidade = mNacionalidade;
-    }
-
-    public int getmDrawlable() {
-        return mDrawlable;
-    }
-
-    public void setmDrawlable(int mDrawlable) {
-        this.mDrawlable = mDrawlable;
-    }
-
-
     @Override
     public int compareTo(Beer another) {
         if ((this.mQualidade) > (another.getmQualidade())) {
@@ -151,7 +69,37 @@ public class Beer implements Parcelable,Comparable<Beer>{
         }
         return 0;
     }
-}
 
+    public int getmId() {
+        return mId;
+    }
+
+    public String getmNome() {
+        return mNome;
+    }
+
+    public String getmDescricao() {
+        return mDescricao;
+    }
+
+    public byte[] getmImagem() {
+        return mImagem;
+    }
+
+    public Float getmQualidade() {
+        return mQualidade;
+    }
+
+    public String getmNacionalidade() {
+        return mNacionalidade;
+    }
+
+    public Double getmTeorAlcolico() {
+        return mTeorAlcolico;
+    }
+
+
+
+}
 
 

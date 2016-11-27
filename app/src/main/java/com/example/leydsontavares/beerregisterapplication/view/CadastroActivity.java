@@ -4,12 +4,14 @@ package com.example.leydsontavares.beerregisterapplication.view;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 import com.example.leydsontavares.beerregisterapplication.R;
 import com.example.leydsontavares.beerregisterapplication.business.GerenciadorBeer;
 import com.example.leydsontavares.beerregisterapplication.model.Beer;
+import com.example.leydsontavares.beerregisterapplication.model.BeerBuilder;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -41,7 +44,6 @@ import butterknife.OnClick;
 public class CadastroActivity extends AppCompatActivity {
 
     Beer beerUP;
-    Beer beer;
     byte[] mBytes;
     GerenciadorBeer gerenciador;
     Float qualidade;
@@ -104,23 +106,22 @@ public class CadastroActivity extends AppCompatActivity {
         extras = getIntent().getExtras();
         if (extras != null && extras.containsKey("beer")) {
             beerUP = (Beer) extras.getParcelable("beer");
-            if(verificaImagemNull(beerUP)){
+            builder.setCancelable(true);
+            if (verificaImagemNull(beerUP)) {
                 preencherDescricaoSemImagem(beerUP);
-            }
-            else{
+            } else {
                 preencherDescricaoComImagem(beerUP);
             }
             enabledFalse();
             mFab.setVisibility(View.VISIBLE);
             mFab.setImageResource(R.drawable.ic_editar);
 
-        } else {
-            beerUP = new Beer();
 
         }
 
 
     }
+
     private boolean verificaImagemNull(Beer b){
         if(b.getmImagem()== null){
             return true;
@@ -138,6 +139,7 @@ public class CadastroActivity extends AppCompatActivity {
         mNacionalidadeBeer.setEnabled(false);
 
     }
+
     private void enabledTrue(){
         mDescricaoBeer.setEnabled(true);
         mNomeBeer.setEnabled(true);
@@ -152,70 +154,90 @@ public class CadastroActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_cadastro, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
 
             case (R.id.action_salvar):
-                beerUP.setmDescricao(mDescricaoBeer.getText().toString());
-                beerUP.setmNome(mNomeBeer.getText().toString());
-                beerUP.setmTeorAlcolico(Double.parseDouble(mteorBeer.getText().toString()));
-                beerUP.setmQualidade(qualidade);
-                beerUP.setmNacionalidade(mNacionalidadeBeer.getSelectedItem().toString());
 
-                decidirAcaoBotaoSalvar(beerUP);
+                String nome = mNomeBeer.getText().toString();
+                String teor = mteorBeer.getText().toString();
 
-                builder.setMessage("Aceita Sugestão ?");
-                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        startActivity(new Intent(CadastroActivity.this, SugestaoActivity.class));
-                    }
-                });
-                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        startActivity(new Intent(CadastroActivity.this, ListarBeerActivity.class));
+                if (nome.equals("") || nome.equals(" ")) {
+                    Toast.makeText(CadastroActivity.this, "Preencha o Campo Nome", Toast.LENGTH_SHORT).show();
+                } else if (teor.equals("") || teor.equals(" ")) {
+                    Toast.makeText(CadastroActivity.this, "Preencha o Teor Alocolico", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    BeerBuilder beer = new BeerBuilder();
+
+                    beer.buildNome(mNomeBeer.getText().toString());
+                    beer.buildDescricao(mDescricaoBeer.getText() == null ? "" : mDescricaoBeer.getText().toString());
+                    beer.buildImagem(mBytes);
+                    beer.buildQualidade(qualidade);
+                    beer.buildTeorAlcolico(Double.parseDouble(mteorBeer.getText().toString()));
+                    beer.buildNacionalidade(mNacionalidadeBeer.getSelectedItem().toString());
+
+                    decidirAcaoBotaoSalvar(beer);
+                }
 
 
-                    }
-                });
-                builder.create();
-                builder.show();
-                break;
             case (R.id.action_limpar):
 
                 mNomeBeer.setText("");
                 mDescricaoBeer.setText("");
                 mteorBeer.setText("");
                 mRtgbarQualidade.setRating(0);
-
-
-                Toast.makeText(CadastroActivity.this, "EXCLUIU", Toast.LENGTH_SHORT).show();
                 break;
+            case android.R.id.home:
+                finish();
+                startActivity(new Intent(CadastroActivity.this, ListarBeerActivity.class));
+                return true;
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
+
     /** Metodo para saber qual ação será efetuada cadastrar ou editar
      *  Atraves da Ação carrega uma nova imagem ou permanece a tirada anteriormente
      */
 
-    private void decidirAcaoBotaoSalvar(Beer beer){
+    private void decidirAcaoBotaoSalvar(BeerBuilder beer){
         if(extras != null){
             if(mBytes == null){
-                mBytes = beer.getmImagem();
+                mBytes = beerUP.getmImagem();
+                beer.buildImagem(mBytes);
             }
-            beer.setmImagem(mBytes);
-            gerenciador.atualizarBeer(beer);
-            Toast.makeText(CadastroActivity.this, "Alterado com sucesso", Toast.LENGTH_SHORT).show();
+            beer.buildId(beerUP.getmId());
+            gerenciador.atualizarBeer(beer.build());
+            Toast.makeText(CadastroActivity.this, "Alterado com sucesso ", Toast.LENGTH_SHORT).show();
+            finish();
+            startActivity(new Intent(CadastroActivity.this, ListarBeerActivity.class));
         }
         else{
-            beer.setmImagem(mBytes);
-            gerenciador.cadatrarBeer(beer);
+            gerenciador.cadatrarBeer(beer.build());
             Toast.makeText(CadastroActivity.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
+
+            builder.setMessage("Aceita Sugestão ?");
+            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                    startActivity(new Intent(CadastroActivity.this, SugestaoActivity.class));
+                }
+            });
+            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                    startActivity(new Intent(CadastroActivity.this, ListarBeerActivity.class));
+
+
+                }
+            });
+            builder.create();
+            builder.show();
+
         }
     }
-
 
     @OnClick(R.id.fab_editar_beer)
     public void editarBeer() {
@@ -301,60 +323,54 @@ public class CadastroActivity extends AppCompatActivity {
 
     }
 
-    public void preencherDescricaoComImagem(Beer beer) {
+    private void preencherDescricaoComImagem(Beer beer) {
 
         mNomeBeer.setText(beer.getmNome());
         mDescricaoBeer.setText(beer.getmDescricao());
         mteorBeer.setText("" + beer.getmTeorAlcolico());
-       // mNacionalidadeBeer.setSelection(posicaoSpinner(mNacionalidadeBeer, beer.getmNacionalidade()));
+        mNacionalidadeBeer.setSelection(getIndex(beer.getmNacionalidade()));
         mRtgbarQualidade.setRating(beerUP.getmQualidade());
         mImagemBeer.setImageBitmap(tratandoImagem(BitmapFactory.decodeByteArray(beerUP.getmImagem(), 0, beerUP.getmImagem().length)));
         mImagemBeer.setVisibility(View.VISIBLE);
         mCamera.setVisibility(View.GONE);
     }
 
-    public void preencherDescricaoSemImagem(Beer beer) {
+    private void preencherDescricaoSemImagem(Beer beer) {
 
         mNomeBeer.setText(beer.getmNome());
         mDescricaoBeer.setText(beer.getmDescricao());
         mteorBeer.setText("" + beer.getmTeorAlcolico());
-        // mNacionalidadeBeer.setSelection(posicaoSpinner(mNacionalidadeBeer, beer.getmNacionalidade()));
+        mNacionalidadeBeer.setSelection(getIndex(beer.getmNacionalidade()));
         mRtgbarQualidade.setRating(beerUP.getmQualidade());
         mImagemBeer.setVisibility(View.GONE);
         mCamera.setVisibility(View.VISIBLE);
-    }
-
-   public int posicaoSpinner(Spinner sp, String str) {
-        for (int i = 0; i < sp.getCount(); i++) {
-            if (sp.getItemAtPosition(i).equals(str)) {
-                return sp.getId();
-
-            }
-        }
-        return 0;
 
     }
+
     private Bitmap tratandoImagem(Bitmap img){
         Bitmap newBitmap = Bitmap.createScaledBitmap(img,800,600,false);
         return newBitmap;
 
     }
+
+    private int getIndex(String str) {
+        String[] nacionalidades = getResources().getStringArray(R.array.nacionalidades);
+        int index = 0;
+        for (int i = 0; i < nacionalidades.length ; i++) {
+            if (nacionalidades[i].equals(str)) {
+                index = i;
+                break;
+            }
+
+        }
+        return index;
+
+    }
+
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Sair?");
-        builder.setMessage("Deseja realmente sair?");
-        builder.setPositiveButton("SIM", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                finish();
-            }
-        });
-        builder.setNegativeButton("NÃO", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-            }
-        });
-        AlertDialog alerta = builder.create();
-        alerta.show();
+        finish();
+        startActivity(new Intent(CadastroActivity.this, ListarBeerActivity.class));
     }
 
 }
