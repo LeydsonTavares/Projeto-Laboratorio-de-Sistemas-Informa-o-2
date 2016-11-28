@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/orange"
+    tools:context=".view.CadastroActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/img_btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/small_layout_margin"
+                android:src="@drawable/ic_camera" />
+            />
+
+            <EditText
+                android:id="@+id/edt_nomeBeer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/small_layout_margin"
+                android:hint="Nome"
+                android:textColorHint="@color/cardview_light_background"
+                android:textSize="@dimen/size_text" />
+            />
+
+            <EditText
+                android:id="@+id/edt_descricaoBeer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/small_layout_margin"
+                android:hint="Descrição"
+                android:textColorHint="@color/cardview_light_background"
+                android:textSize="@dimen/size_text" />
+
+            <EditText
+                android:id="@+id/edt_teor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:inputType="numberDecimal"
+                android:layout_marginTop="@dimen/small_layout_margin"
+                android:hint="Teor Alcolico"
+                android:textColorHint="@color/cardview_light_background"
+                android:textSize="@dimen/size_text" />
+
+            <Spinner
+
+                android:id="@+id/sp_nacionalidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_layout_margin"
+                android:entries="@array/nacionalidades"
+                android:textSize="@dimen/size_text" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/foodRatingBar"
+                android:layout_marginTop="@dimen/size_text"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="59dp"
+                android:stepSize="0.5"
+                android:layout_marginBottom="10dp"
+
+                />
+
+            <Button
+                android:id="@+id/btn_facebook"
+                android:background="@color/blue"
+                android:text="Postar Facebook"
+                android:textColor="@color/cardview_light_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_editar_beer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_white"
+        app:backgroundTint="@color/cardview_dark_background" />
+
+</android.support.design.widget.CoordinatorLayout>
+

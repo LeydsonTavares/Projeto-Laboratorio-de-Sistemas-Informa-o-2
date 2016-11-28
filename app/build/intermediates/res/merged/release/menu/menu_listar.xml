@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:title="Pesquisar"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/ranking"
+        android:icon="@drawable/ic_ranking"
+        android:orderInCategory="100"
+        android:title="Ranking"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sugestao"
+        android:icon="@drawable/ic_ranking"
+        android:orderInCategory="100"
+        android:title="Sugestão"
+        app:showAsAction="never" />
+
+
+</menu>
