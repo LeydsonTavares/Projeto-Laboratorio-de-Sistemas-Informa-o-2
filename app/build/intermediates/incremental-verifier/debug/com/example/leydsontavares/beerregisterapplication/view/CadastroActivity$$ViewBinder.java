@@ -30,10 +30,8 @@ public class CadastroActivity$$ViewBinder<T extends com.example.leydsontavares.b
     target.mImagemBeer = finder.castView(view, 2131558517, "field 'mImagemBeer'");
     view = finder.findRequiredView(source, 2131558523, "field 'mRtgbarQualidade'");
     target.mRtgbarQualidade = finder.castView(view, 2131558523, "field 'mRtgbarQualidade'");
-    view = finder.findRequiredView(source, 2131558524, "field 'mTxtAvaliacao'");
-    target.mTxtAvaliacao = finder.castView(view, 2131558524, "field 'mTxtAvaliacao'");
-    view = finder.findRequiredView(source, 2131558525, "field 'mBtnFacebook' and method 'chamaTelaFacebook'");
-    target.mBtnFacebook = finder.castView(view, 2131558525, "field 'mBtnFacebook'");
+    view = finder.findRequiredView(source, 2131558524, "field 'mBtnFacebook' and method 'chamaTelaFacebook'");
+    target.mBtnFacebook = finder.castView(view, 2131558524, "field 'mBtnFacebook'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -42,8 +40,8 @@ public class CadastroActivity$$ViewBinder<T extends com.example.leydsontavares.b
           target.chamaTelaFacebook();
         }
       });
-    view = finder.findRequiredView(source, 2131558526, "field 'mFab' and method 'editarBeer'");
-    target.mFab = finder.castView(view, 2131558526, "field 'mFab'");
+    view = finder.findRequiredView(source, 2131558525, "field 'mFab' and method 'editarBeer'");
+    target.mFab = finder.castView(view, 2131558525, "field 'mFab'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -62,7 +60,6 @@ public class CadastroActivity$$ViewBinder<T extends com.example.leydsontavares.b
     target.mCamera = null;
     target.mImagemBeer = null;
     target.mRtgbarQualidade = null;
-    target.mTxtAvaliacao = null;
     target.mBtnFacebook = null;
     target.mFab = null;
   }

@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class FacebookActivity$$ViewBinder<T extends com.example.leydsontavares.beerregisterapplication.view.FacebookActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558531, "field 'mLoginButton' and method 'onClick'");
-    target.mLoginButton = finder.castView(view, 2131558531, "field 'mLoginButton'");
+    view = finder.findRequiredView(source, 2131558530, "field 'mLoginButton' and method 'onClick'");
+    target.mLoginButton = finder.castView(view, 2131558530, "field 'mLoginButton'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

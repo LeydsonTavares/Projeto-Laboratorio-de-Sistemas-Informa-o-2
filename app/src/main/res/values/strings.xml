@@ -2,15 +2,16 @@
     <string name="app_name">BeerRegisterApplication</string>
     <string name="facebook_app_id">1770677599847360</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="nacinalidade1">Brasil</string>
-    <string name="nacinalidade2">Alemanha</string>
-    <string name="nacinalidade3">Argetina</string>
-    <string name="nacinalidade4">França</string>
-    <string name="nacinalidade5">Inglaterra</string>
-    <string name="nacinalidade6">Estados Unidos</string>
-    <string name="excelente">Excelente</string>
-    <string name="rasuavel">Razoável</string>
-    <string name="horrivel">Horrível</string>
+
+    <string name="nacinalidade1">Alemanha</string>
+    <string name="nacinalidade2">Argetina</string>
+    <string name="nacinalidade3">Bélgica</string>
+    <string name="nacinalidade4">Brasil</string>
+    <string name="nacinalidade5">Estados Unidos</string>
+    <string name="nacinalidade6">Inglaterra</string>
+    <string name="nacinalidade7">México</string>
+    <string name="nacinalidade8">Uruguai</string>
+
     <string-array name="nacionalidades">
 
         <item>@string/nacinalidade1</item>

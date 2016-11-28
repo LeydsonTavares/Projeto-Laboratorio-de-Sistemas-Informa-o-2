@@ -4,15 +4,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarList"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/orange"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <GridView
-        android:id="@+id/gridView_ranking"
+        android:id="@+id/gridView_sugestao"
         android:layout_marginTop="@dimen/large_layout_margin"
         android:layout_marginLeft="@dimen/large_layout_margin"
         android:layout_marginRight="@dimen/large_layout_margin"

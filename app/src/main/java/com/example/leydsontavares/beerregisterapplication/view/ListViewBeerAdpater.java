@@ -77,6 +77,8 @@ public class ListViewBeerAdpater extends BaseAdapter {
             holder = new ViewHolder(view);
             Beer beer = mListaBeer.get(position);
 
+
+
             holder.mTvNomeBeer.setText(beer.getmNome());
             holder.mQualidadeBeer.setText("" + beer.getmQualidade());
             fotoArray = beer.getmImagem();

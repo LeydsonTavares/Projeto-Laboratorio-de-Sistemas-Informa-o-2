@@ -30,12 +30,15 @@ public class BeerBuilder {
     public void buildImagem(byte[] bytes){
         beer.mImagem = bytes;
     }
+
     public void buildQualidade(Float nota){
         beer.mQualidade = nota;
     }
+
     public void buildTeorAlcolico(Double teor){
         beer.mTeorAlcolico = teor;
     }
+
     public void buildNacionalidade(String nacionalidade){
         beer.mNacionalidade = nacionalidade;
     }

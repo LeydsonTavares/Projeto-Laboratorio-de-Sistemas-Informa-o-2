@@ -7,6 +7,7 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
+import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -18,12 +19,15 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.leydsontavares.beerregisterapplication.R;
 import com.example.leydsontavares.beerregisterapplication.business.GerenciadorBeer;
 import com.example.leydsontavares.beerregisterapplication.dao.BeerDAO;
 import com.example.leydsontavares.beerregisterapplication.model.Beer;
+
+import java.util.LinkedList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -44,6 +48,9 @@ public class ListarBeerActivity extends AppCompatActivity {
     Beer beerUP;
     AlertDialog.Builder builder;
     private ListViewBeerAdpater mAdapter;
+    List<Beer> filtro ;
+    static String nomeBeer;
+
 
 
 
@@ -53,6 +60,7 @@ public class ListarBeerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listar_beer);
         setTitle("Register Beer");
         ButterKnife.bind(this);
+        filtro = new LinkedList<>();
         gerenciador = GerenciadorBeer.getInstance(this);
         builder = new AlertDialog.Builder(this);
         mAdapter = new ListViewBeerAdpater(gerenciador.buscarTodasBeer(), this);
@@ -74,12 +82,13 @@ public class ListarBeerActivity extends AppCompatActivity {
         @Override
         public boolean onQueryTextSubmit(String query) {
             for (Beer beer : gerenciador.buscarTodasBeer()) {
-                if (query.equals(beer.getmNome())) {
+                if (query.equalsIgnoreCase(beer.getmNome())) {
                     beerUP = beer;
                 }
             }
 
             if (beerUP != null) {
+                finish();
                 Intent intent = new Intent(ListarBeerActivity.this, CadastroActivity.class);
                 intent.putExtra("beer", beerUP);
                 startActivity(intent);
@@ -92,6 +101,24 @@ public class ListarBeerActivity extends AppCompatActivity {
 
         @Override
         public boolean onQueryTextChange(String newText){
+            filtro.clear();
+            if (newText.length() > 0) {
+                nomeBeer = newText;
+                for (Beer beer : gerenciador.buscarTodasBeer()) {
+                    if (beer.getmNome().toLowerCase().startsWith(newText.toLowerCase())) {
+                            filtro.add(beer);
+                            mAdapter = new ListViewBeerAdpater(filtro ,ListarBeerActivity.this);
+                            mListViewBeer.setAdapter(mAdapter);
+                            mListViewBeer.deferNotifyDataSetChanged();
+
+                    }
+                }
+            }else{
+                filtro.clear();
+                mAdapter = new ListViewBeerAdpater(gerenciador.buscarTodasBeer() ,ListarBeerActivity.this);
+                mListViewBeer.setAdapter(mAdapter);
+                mListViewBeer.deferNotifyDataSetChanged();
+            }
                 return false;
 
         }
@@ -102,8 +129,12 @@ public class ListarBeerActivity extends AppCompatActivity {
         switch(item.getItemId()){
 
             case (R.id.ranking):
-                Intent intent = new Intent(ListarBeerActivity.this, RankingActivity.class);
-                startActivity(intent);
+                startActivity (new Intent(ListarBeerActivity.this, RankingActivity.class));
+
+                break;
+            case (R.id.sugestao):
+                finish();
+                startActivity(new Intent(ListarBeerActivity.this, SugestaoActivity.class));
                 break;
         }
         return true;

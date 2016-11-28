@@ -65,12 +65,11 @@ public class CadastroActivity extends AppCompatActivity {
     ImageView mImagemBeer;
     @Bind(R.id.ratingBar)
     RatingBar mRtgbarQualidade;
-    @Bind(R.id.txt_avaliacao)
-    TextView mTxtAvaliacao;
     @Bind(R.id.btn_facebook)
     Button mBtnFacebook;
     @Bind(R.id.fab_editar_beer)
     FloatingActionButton mFab;
+
     AlertDialog.Builder builder;
 
 
@@ -92,11 +91,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
-
                     qualidade =  rating;
-                    mTxtAvaliacao.setText("" + rating);
-
-
 
             }
 
@@ -137,6 +132,7 @@ public class CadastroActivity extends AppCompatActivity {
         mteorBeer.setEnabled(false);
         mRtgbarQualidade.setEnabled(false);
         mNacionalidadeBeer.setEnabled(false);
+        mBtnFacebook.setEnabled(false);
 
     }
 
@@ -146,6 +142,8 @@ public class CadastroActivity extends AppCompatActivity {
         mteorBeer.setEnabled(true);
         mRtgbarQualidade.setEnabled(true);
         mNacionalidadeBeer.setEnabled(true);
+        mBtnFacebook.setEnabled(true);
+        mCamera.setVisibility(View.VISIBLE);
 
     }
 

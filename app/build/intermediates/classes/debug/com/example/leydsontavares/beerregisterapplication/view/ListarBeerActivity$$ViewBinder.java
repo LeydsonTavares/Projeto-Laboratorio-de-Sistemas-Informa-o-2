@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class ListarBeerActivity$$ViewBinder<T extends com.example.leydsontavares.beerregisterapplication.view.ListarBeerActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558527, "field 'mListViewBeer', method 'itemClicado', and method 'itemLongClicado'");
-    target.mListViewBeer = finder.castView(view, 2131558527, "field 'mListViewBeer'");
+    view = finder.findRequiredView(source, 2131558526, "field 'mListViewBeer', method 'itemClicado', and method 'itemLongClicado'");
+    target.mListViewBeer = finder.castView(view, 2131558526, "field 'mListViewBeer'");
     ((android.widget.AdapterView<?>) view).setOnItemClickListener(
       new android.widget.AdapterView.OnItemClickListener() {
         @Override public void onItemClick(
@@ -32,8 +32,8 @@ public class ListarBeerActivity$$ViewBinder<T extends com.example.leydsontavares
           return target.itemLongClicado(p2);
         }
       });
-    view = finder.findRequiredView(source, 2131558528, "field 'mFab' and method 'addBeer'");
-    target.mFab = finder.castView(view, 2131558528, "field 'mFab'");
+    view = finder.findRequiredView(source, 2131558527, "field 'mFab' and method 'addBeer'");
+    target.mFab = finder.castView(view, 2131558527, "field 'mFab'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

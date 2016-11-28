@@ -394,17 +394,16 @@
     <string name="com_facebook_send_button_text">Send</string>
     <string name="com_facebook_share_button_text">Share</string>
     <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
-    <string name="excelente">Excelente</string>
     <string name="facebook_app_id">1770677599847360</string>
-    <string name="horrivel">Horrível</string>
     <string name="messenger_send_button_text">Send</string>
-    <string name="nacinalidade1">Brasil</string>
-    <string name="nacinalidade2">Alemanha</string>
-    <string name="nacinalidade3">Argetina</string>
-    <string name="nacinalidade4">França</string>
-    <string name="nacinalidade5">Inglaterra</string>
-    <string name="nacinalidade6">Estados Unidos</string>
-    <string name="rasuavel">Razoável</string>
+    <string name="nacinalidade1">Alemanha</string>
+    <string name="nacinalidade2">Argetina</string>
+    <string name="nacinalidade3">Bélgica</string>
+    <string name="nacinalidade4">Brasil</string>
+    <string name="nacinalidade5">Estados Unidos</string>
+    <string name="nacinalidade6">Inglaterra</string>
+    <string name="nacinalidade7">México</string>
+    <string name="nacinalidade8">Uruguai</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_cadastro">Cadastro</string>
     <string name="title_activity_main">MainActivity</string>
@@ -418,8 +417,8 @@
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/cardview_dark_background</item>
+        <item name="colorPrimaryDark">@color/orange</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
@@ -1716,7 +1715,7 @@
     </style>
     <style name="Theme.AppCompat.Light" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@android:color/holo_orange_light</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>

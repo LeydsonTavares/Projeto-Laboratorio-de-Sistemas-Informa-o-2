@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class RankingActivity$$ViewBinder<T extends com.example.leydsontavares.beerregisterapplication.view.RankingActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558532, "field 'mListViewBeer'");
-    target.mListViewBeer = finder.castView(view, 2131558532, "field 'mListViewBeer'");
+    view = finder.findRequiredView(source, 2131558531, "field 'mListViewBeer'");
+    target.mListViewBeer = finder.castView(view, 2131558531, "field 'mListViewBeer'");
   }
 
   @Override public void unbind(T target) {
