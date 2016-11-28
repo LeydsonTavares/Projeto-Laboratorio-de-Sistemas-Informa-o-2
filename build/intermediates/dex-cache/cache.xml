@@ -3,115 +3,101 @@
 
     <item
         jar="C:\Users\LeydsonTavares\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_68befabddae93e7ee3e492f997eb9cd3ef7e05fd\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\butterknife-7.0.1_68befabddae93e7ee3e492f997eb9cd3ef7e05fd.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_11f9fd67b5805028b6b230ad2027f0c8cba6810b\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_11f9fd67b5805028b6b230ad2027f0c8cba6810b.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_b504a520b4325183d5dc44f09ca1d803fbc8efb7\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="debf30ce0a7560396b6235edef77e447006454c2">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.3.0_1f80cf4bc087c176fe2c764deb97fc9667ff9ec9\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.3.0_04c10c3bf3e7b8b2d5b9d5439dbd8200d2d13f21\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_b504a520b4325183d5dc44f09ca1d803fbc8efb7.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_2f58f3860edc42f7995946f055eea10dc91993a3\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_2f58f3860edc42f7995946f055eea10dc91993a3.jar" />
     </item>
     <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
         revision="23.0.2"
-        sha1="7feb5fe4322b5482a3f1e1a545bc2ea02014898a">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7c8ebd0bd14eb5981afa12945333ce0f74a76773\classes.dex" />
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.3.0_1f80cf4bc087c176fe2c764deb97fc9667ff9ec9.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_8a1860d0a7e1a634864e1af0fad6afb22e44c2bd\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.4.0_8a1860d0a7e1a634864e1af0fad6afb22e44c2bd.jar" />
     </item>
     <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="false"
         revision="23.0.2"
-        sha1="9bb6da4823cf4800f5ebb155c74fd520658250e6">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f9d338108b51152d4463f87353152545bc337a9d\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_53a2121e362109a99b2b1d42db8519038d508198\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_94dfdb7258b28b5350a5d11796a3c470a0220fa4\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_c2a257078b3c5b321c0aa83f99a6a9119373c155\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_67fb0253e128c6f0b7cd43b23debf007026b0080\classes.dex" />
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-design-23.3.0_04c10c3bf3e7b8b2d5b9d5439dbd8200d2d13f21.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.4.0_35d75679d674fad22fbbf1b6647ea01da117409a\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\bolts-applinks-1.4.0_35d75679d674fad22fbbf1b6647ea01da117409a.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="99d79164a8f983161bdb59b1403b9e4a1127aae1">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.16.1_1d19c2b5b39914d7d7fc82c97000ddf75960314e\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.facebook.android-facebook-android-sdk-4.16.1_1d19c2b5b39914d7d7fc82c97000ddf75960314e.jar" />
     </item>
     <item
         jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         revision="23.0.2"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_a792299fe9e3691c6fc810f2dfca374299340a40\classes.dex" />
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-animated-vector-drawable-23.4.0_a792299fe9e3691c6fc810f2dfca374299340a40.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.4.0_53a2121e362109a99b2b1d42db8519038d508198.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-customtabs-23.4.0_94dfdb7258b28b5350a5d11796a3c470a0220fa4.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeydsonTavares\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\bolts-tasks-1.4.0_c2a257078b3c5b321c0aa83f99a6a9119373c155.jar" />
+    </item>
+    <item
+        jar="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.4.0_67fb0253e128c6f0b7cd43b23debf007026b0080.jar" />
     </item>
 
 </items>

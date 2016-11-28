@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\LeydsonTavares\\AndroidStudioProjects\\BeerRegisterApplication\\app\\build\\intermediates\\res\\merged\\release\\menu\\menu_cadastro.xml",
+        "source": "C:\\Users\\LeydsonTavares\\AndroidStudioProjects\\BeerRegisterApplication\\app\\src\\main\\res\\menu\\menu_cadastro.xml"
+    },
+    {
+        "merged": "C:\\Users\\LeydsonTavares\\AndroidStudioProjects\\BeerRegisterApplication\\app\\build\\intermediates\\res\\merged\\release\\menu\\menu_listar.xml",
+        "source": "C:\\Users\\LeydsonTavares\\AndroidStudioProjects\\BeerRegisterApplication\\app\\src\\main\\res\\menu\\menu_listar.xml"
+    }
+]
