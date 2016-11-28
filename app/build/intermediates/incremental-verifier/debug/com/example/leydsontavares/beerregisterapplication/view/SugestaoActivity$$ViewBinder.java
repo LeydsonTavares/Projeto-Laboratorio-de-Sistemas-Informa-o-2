@@ -8,11 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class SugestaoActivity$$ViewBinder<T extends com.example.leydsontavares.beerregisterapplication.view.SugestaoActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558535, "field 'mGridView'");
-    target.mGridView = finder.castView(view, 2131558535, "field 'mGridView'");
+    view = finder.findRequiredView(source, 2131558554, "field 'mVpMovies'");
+    target.mVpMovies = finder.castView(view, 2131558554, "field 'mVpMovies'");
+    view = finder.findRequiredView(source, 2131558555, "field 'mPagerTabStrip'");
+    target.mPagerTabStrip = finder.castView(view, 2131558555, "field 'mPagerTabStrip'");
   }
 
   @Override public void unbind(T target) {
-    target.mGridView = null;
+    target.mVpMovies = null;
+    target.mPagerTabStrip = null;
   }
 }

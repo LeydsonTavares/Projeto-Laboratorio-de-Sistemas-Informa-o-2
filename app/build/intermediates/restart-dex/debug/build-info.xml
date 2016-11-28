@@ -4,51 +4,30 @@
     api-level="21"
     density="xhdpi"
     format="7"
-    timestamp="99282973778837"
-    token="-513908612775283171"
-    verifier="COMPATIBLE" >
+    timestamp="202438901245446"
+    token="7852953018492064590" >
 
     <task
         name="javac"
-        duration="1062" />
+        duration="2737" />
     <task
         name="instant-run-dex"
-        duration="1433" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="83" />
+        duration="1663" />
     <task
         name="verifier"
-        duration="27" />
+        duration="654" />
 
     <artifact
-        location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="94364125525533" >
+    <build timestamp="202438901245446" >
         <artifact
             location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="99178246272054" >
-        <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="99282973778837"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterApplication\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build timestamp="888790332430169" >
-        <artifact
-            location="C:\Users\LeydsonTavares\AndroidStudioProjects\BeerRegisterAplication\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

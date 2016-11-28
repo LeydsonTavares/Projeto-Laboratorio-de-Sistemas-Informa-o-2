@@ -12,7 +12,13 @@
         android:icon="@drawable/ic_ranking"
         android:orderInCategory="100"
         android:title="Ranking"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sugestao"
+        android:icon="@drawable/ic_ranking"
+        android:orderInCategory="100"
+        android:title="Sugestão"
+        app:showAsAction="never" />
 
 
 </menu>

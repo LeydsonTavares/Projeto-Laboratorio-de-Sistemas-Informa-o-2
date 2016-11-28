@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 import com.example.leydsontavares.beerregisterapplication.R;
 import com.example.leydsontavares.beerregisterapplication.model.Beer;
+import com.example.leydsontavares.beerregisterapplication.model.BeerSugestao;
+
 import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -18,12 +20,12 @@ import butterknife.ButterKnife;
 
 public class GridViewBeerAdapter extends BaseAdapter {
 
-    List<Beer> beerList;
+    List<BeerSugestao> beerList;
 
     Context mContext;
     LayoutInflater mInflater;
 
-    public GridViewBeerAdapter(List<Beer> mbeer, Context mContext) {
+    public GridViewBeerAdapter(List<BeerSugestao> mbeer, Context mContext) {
         this.beerList = mbeer;
         this.mContext = mContext;
         mInflater = LayoutInflater.from(mContext);
@@ -52,9 +54,10 @@ public class GridViewBeerAdapter extends BaseAdapter {
         if (convertView == null) {
             view = mInflater.inflate(R.layout.item_grid, parent, false);
             holder = new ViewHolder(view);
-            Beer beer = beerList.get(position);
+            BeerSugestao beer = beerList.get(position);
 
 
+            holder.mPoster.setImageResource((beer.getDrawlable()));
 
         } else {
             view = convertView;

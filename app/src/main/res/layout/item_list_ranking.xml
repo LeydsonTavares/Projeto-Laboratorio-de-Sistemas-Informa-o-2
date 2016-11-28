@@ -23,7 +23,7 @@
                 android:singleLine="true"
                 android:text="Register Beer"
                 android:textSize="25dp"
-                android:textColor="@color/blue"
+                android:textColor="@color/cardview_light_background"
                 android:layout_weight="0.48"
                 android:textStyle="bold" />
             <LinearLayout
@@ -37,7 +37,7 @@
                     android:layout_height="match_parent"
                     android:text="5.0"
                     android:textSize="25dp"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/cardview_light_background"
                     android:textStyle="bold" />
 
 
